@@ -25,7 +25,8 @@
 
 }
 .navbar-brand{
-  font-size:2rem;
+  font-family: 'Libre Baskerville', serif;
+  font-size:2rem !important;
   display: flex;
   z-index: 10;
   align-self: center;
@@ -443,13 +444,7 @@ width:auto;
   /*//MEDIA QUERIES//*/
 
   @media (max-width: 600px) {
-.nav-list{
-  display:none;
-}
-    #hamburger-menu {
-      display: inline;
-    }
- 
+
   }
   @media only screen and (max-width: 768px) {
 
@@ -462,7 +457,7 @@ width:auto;
     }
 
     .custom-shape-divider-top-1678475592{
-      width: calc(600% + 1.3px);
+      width: calc(100% + 1.3px);
     height: 320px;
     }
 
