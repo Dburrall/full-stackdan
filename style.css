@@ -391,12 +391,8 @@ width:auto;
 
 }
 
-
-
-#app {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+label {
+  font-family: 'Libre Baskerville', serif;
 }
 
 /*// FOOTER STYLING //*/
@@ -440,9 +436,6 @@ width:auto;
 }
 
 
-
-
-
   /*//MEDIA QUERIES//*/
 
   @media (max-width: 600px) {
@@ -474,10 +467,10 @@ width:auto;
       font-size:2rem;
     }
     .profile-pic{
-      display:flex;
-      justify-content: center;
-      flex-direction: column;
-      margin-left:40px;
+      float:none;
+      width:22rem;
+      height:auto;
+
     }
     .languages{
       display:flex;
