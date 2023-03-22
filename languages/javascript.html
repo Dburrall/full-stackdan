@@ -10,15 +10,10 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>   
-<script src="/javascript/slidein.js" defer></script>
-<script src="/javascript/text.js" defer></script>
-<script src="/javascript/filter.js" defer></script>
     <title>Full-Stack-Dan</title>
     
 </head>
@@ -57,11 +52,94 @@
         <!--end of nav-->
  
 
-        <section id="javascript">
+        <section id="language-body">
+          <h1>Javascript</h1>
 
-            <h1>Strings</h1>
+          <h2 class="language-subject">Strings</h2>
+        
+          <p>You can also combine the character access with the .length property. So using the same language variable, here's how you get the second to last character from it:</p>
+          <p class="textarea-s">const language = "JavaScript";
+            <br>
+                        language.substring(1, 4); //"ava"</p>
+          <p>Template strings support interpolation! This means you could write a variable in your string, and get its value. The syntax is straightforward, you wrap your variable name with a dollar sign and curly braces. Let's take an example where we have a variable language with a value of JavaScript</p>
+          <p>length is a property that gives you the length of a string</p>
+
+          <p>.toUpperCase() is a function that converts the string to upper case</p>
             
-            <p>You can also combine the character access with the .length property. So using the same language variable, here's how you get the second to last character from it:</p>
+          <p>.toLowerCase() is a function that converts the string to lower case
+            parentheses () on functions are required. .length is a property that is already pre-computed; therefore, it does not need parentheses.</p>
+            
+            <p> console.log(...) is used for debugging and is NOT a replacement for return.
+            Square brackets [index] are used to access a specific index from a string
+            The index starts at 0. So the first character is index 0
+            You can combine it with the length of a string to get another character in another position
+            A substring is a part or a portion of a string.</p>
+            
+            <p>string.substring(indexStart, indexEnd) is used to return a portion of the string.</p>
+            
+            <p>indexStart: the position of the first character you'd like to include.</p>
+            
+            <p>indexEnd: the position of the first character you'd like to ignore.
+            the indexEnd argument is optional which means you can leave it out.
+            The + operator is used to add 2 numbers
+            The + operator is used to concatenate 2 strings
+            A template string is a string created with the backtick character: `</p>
+          
+
+            <h2>Conditions</h2>
+            <p>Using an if condition, you can run a piece of code when the condition evaluates to true.</p>
+            <p>The syntax is if (condition) and then curly braces {} wrap the lines of code that correspond to this condition
+              The else keyword can be used to perform some other code based on all the other conditions not satisfied with the if.</p>
+            <p class="textarea-m">
+              function canVote(age) {
+                <br>
+                if (age >= 18) {<br>
+                    return true;<br>
+                    
+                }<br>
+                return false;<br>
+            }
+            </p>
+          <h2>Arrays</h2>
+          <p>
+            Arrays in JavaScript allow you to store multiple elements in the same variable. You can store numbers, strings, booleans, arrays, objects & more. These can be mixed within the same array.
+Here are some examples:
+          </p>
+          <p class="textarea-s">
+            const users = []; // empty array<br>
+const grades = [10, 8, 13, 15]; // array of numbers<br>
+const attendees = ["Sam", "Alex"]; // array of strings<br>
+const values = [10, false, "John"]; // mixed
+          </p>
+          <h3>.length property</h3>
+          <p>You can get the number of elements in an array by using the .length property. For example:</p>
+          <p class="textarea-s">
+            [].length; // 0<br>
+
+          const grades = [10, 8, 13, 15];<br>
+          grades.length; // 4
+          </p>
+          <h3>Get element by index</h3>
+          <p>Similarly to strings, you can get an element from an array by using the square bracket syntax [] with the index starting from 0.</p>
+          <p>For example:</p>
+          <p class="textarea-s">
+            const users = ["Sam", "Alex", "Charley"];<br>
+            users[1]; //"Alex"
+          </p>
+
+          <p>You can also use the .at(index) method, which accepts negative indices making it easier to find the last element of the array. Here are some examples with .at():</p>
+          <p class="textarea-s">
+            const users = ["Sam", "Alex", "Charley"];<br>
+            users.at(1); //"Alex"<br>
+            users.at(-2); //"Alex"
+          </p>
+          <h3>Adding an element</h3>
+          <p>You can add an element to an array by using the .push() method:</p>
+          <p class="textarea-s">
+            const numbers = [10, 8, 13, 15];<br>
+            numbers.push(20); // returns 5 (the new length of the array)<br>
+            console.log(numbers); // [10, 8, 13, 15, 20];
+          </p>
 
 
 
@@ -76,8 +154,33 @@
 
 
 
-        </section>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          </section>
+          
 
 
 
