@@ -56,24 +56,31 @@
  
 <section id="language-body">
 
-<h1 class="language-title">React</h1>
+<h1 class="language-title">Components</h1>
 
-<ul>
-    <li>
-        <a href="/react-notes/components.html">Components</a>
-    </li>
-    <li>
-        <a href="/react-notes/props.html">Props</a>
-    </li>
-    <li>
-        <a href="/react-notes/state.html">State</a>
-    </li>
-    <li>
-        <a href="/react-notes/lifecycle.html">Life Cycle</a>
-    </li>
-</ul>
+<p>Component Class Instructions
+    Let’s review what you’ve learned so far! Find each of these points in app.js:
+    On line 1, import React from 'react' creates a JavaScript object. This object contains properties that are needed to make React work, such as React.createElement() and React.Component.
+    On line 2, import ReactDOM from 'react-dom' creates another JavaScript object. This object contains methods that help React interact with the DOM, such as ReactDOM.render().
+    On line 4, by subclassing React.Component, you create a new component class. This is not a component! A component class is more like a factory that produces components. When you start making components, each one will come from a component class.
+    Whenever you create a component class, you need to give that component class a name. That name should be written in UpperCamelCase. In this case, your chosen name is MyComponentClass.
+    Something that we haven’t talked about yet is the body of your component class: the pair of curly braces after React.Component, and all of the code between those curly braces.
+    Like all JavaScript classes, this one needs a body. The body will act as a set of instructions, explaining to your component class how it should build a React component.
+    </p>
 
+    <p class="textarea-m">
+        import React from 'react';<br>
+        import ReactDOM from 'react-dom';<br>
+        
+        
+        class MyComponentClass extends React.Component {<br>
+          render() {<br>
+            return Hello world;<br>
+          }<br>
+        }
+        
 
+    </p>
 
 
 
@@ -131,13 +138,6 @@
     </section>
     
     
-        <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-        <script src="https://unpkg.com/scrollreveal"></script>
-        <script src="https://kit.fontawesome.com/754f7b471b.js" crossorigin="anonymous"></script>
-        <script>
-           
-            ScrollReveal().reveal('.about-me', {delay: 600})
-            
-        </script>
+       
     </body>
     </html>
