@@ -56,30 +56,83 @@
  
 <section id="language-body">
 
-<h1 class="language-title">React</h1>
+<h1 class="language-title"> Hook Components:State</h1>
 
-<ul>
-    <li>
-        <a href="/react-notes/components.html">Components</a>
-    </li>
-    <li>
-        <a href="/react-notes/props.html">Props</a>
-    </li>
-    <li>
-        <a href="/react-notes/state.html">State</a>
-    </li>
-    <li>
-        <a href="/react-notes/lifecycle.html">Life Cycle</a>
-    </li>
+<p>
+    A component can do more than just read its own state. A component can also change its own state.
+    A component changes its state by calling the function this.setState().
+<br>
+    this.setState() takes two arguments: an object that will update the component’s state, and a callback. You basically never need the callback.
+    In the code editor, take a look at Example.js. Notice that < Example /> has a state of:
 
-    <li> <a href="/react-notes/hooks:state.html">Hook:state</a>  </li>
-</ul>
+</p>
+
+<p class="textarea-s">
+    {
+        mood:   'great',
+        hungry: false
+      }      
+</p>
+
+<p>
+    Now, let’s say that <Example /> were to call:
+</p>
+
+<p class="textarea-s">
+    this.setState({ hungry: true });
+</p>
+
+<p>
+    After that call, here is what <Example />‘s state would be:
+</p>
+
+<p class="textarea-s">
+    {
+        mood:   'great',
+        hungry: true
+      }
+      
+</p>
+
+<p>
+    The mood part of the state remains unaffected!
+this.setState() takes an object, and merges that object with the component’s current state. If there are properties in the current state that aren’t part of that object, then those properties remain how they were.
+</p>
+
+<p>
+    React Hooks, plainly put, are functions that let us manage the internal state of components and handle post-rendering side effects directly from our function components. Hooks don’t work inside classes — they let us use fancy React features without classes. Keep in mind that function components and React Hooks do not replace class components. They are completely optional; just a new tool that we can take advantage of.
+
+    React offers a number of built-in Hooks. A few of these include useState(), useEffect(), useContext(), useReducer(), and useRef(). See the full list in the docs. In this lesson, we’ll learn different ways to manage state in a function component.
+    
+</p>
+
+<p>
+    useState() is a JavaScript function defined in the React library. When we call this function, it returns an array with two values:
+current state - the current value of this state
+state setter - a function that we can use to update the value of this state
+Because React returns these two values in an array, we can assign them to local variables, naming them whatever we like. For example:
+
+</p>
+
+<p class="textarea-xl">
+    const [toggle, setToggle] = useState();<br>
 
 
+import React, { useState } from "react";<br>
 
+function Toggle() {<br>
+  const [toggle, setToggle] = useState();<br>
 
+  return (<br>
+    < div><br>
+      < p>The toggle is {toggle}< /p><br>
+      < button onClick={() => setToggle("On")}>On< /button><br>
+      < button onClick={() => setToggle("Off")}>Off< /button><br>
+    < /div><br>
+  );<br>
+}
 
-
+</p>
 
 </section>
 
@@ -133,13 +186,8 @@
     </section>
     
     
-        <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-        <script src="https://unpkg.com/scrollreveal"></script>
+        
         <script src="https://kit.fontawesome.com/754f7b471b.js" crossorigin="anonymous"></script>
-        <script>
-           
-            ScrollReveal().reveal('.about-me', {delay: 600})
-            
-        </script>
+        
     </body>
     </html>
